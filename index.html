@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game Hub</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="mainContainer">
+    <h1>🎮 Mini Game Hub</h1>
+
+    <div class="tabs">
+      <button onclick="openTab('guess')">Number Guess</button>
+      <button onclick="openTab('bmi')">BMI Calculator</button>
+      <button onclick="openTab('color')">Color Changer</button>
+      <button onclick="openTab('clock')">Digital Clock</button>
+    </div>
+
+    <div id="guess" class="tab-content">
+      <h2>Number Guessing Game</h2>
+      <p>Guess a number between 1 and 100</p>
+      <input type="number" id="userGuess" placeholder="Enter guess"/>
+      <button onclick="checkGuess()">Guess</button>
+      <p id="guessResult"></p>
+    </div>
+
+    <div id="bmi" class="tab-content">
+      <h2>BMI Calculator</h2>
+      <input type="number" id="weight" placeholder="Weight (kg)" />
+      <input type="number" id="height" placeholder="Height (cm)" />
+      <button onclick="calculateBMI()">Calculate</button>
+      <p id="bmiResult"></p>
+    </div>
+
+    <div id="color" class="tab-content">
+      <h2>Color Changer</h2>
+      <button onclick="changeColor()">Change Background Color</button>
+    </div>
+
+    <div id="clock" class="tab-content">
+      <h2>Digital Clock</h2>
+      <div id="clockDisplay"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
